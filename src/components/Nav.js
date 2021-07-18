@@ -5,19 +5,19 @@ const Nav = () => {
   return (
     <StyledNav>
       <h1>
-        <a id="logo" to="/">
+        <Link id="logo" to="/">
           Capture
-        </a>
+        </Link>
       </h1>
       <ul>
         <li>
-          <a to="/">1. About Us</a>
+          <Link to="/">1. About Us</Link>
         </li>
         <li>
-          <a to="/work">2. Oue Work</a>
+          <Link to="/work">2. Oue Work</Link>
         </li>
         <li>
-          <a to="/contact">3. Contact Us</a>
+          <Link to="/contact">3. Contact Us</Link>
         </li>
       </ul>
     </StyledNav>
