@@ -23,7 +23,7 @@ function AboutSection() {
     <About>
       <Description>
         <motion.div
-          variants={container}
+          //variants={container}
           initial="hidden"
           animate="show"
           className="title"
