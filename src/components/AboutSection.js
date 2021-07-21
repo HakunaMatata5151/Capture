@@ -21,6 +21,8 @@ function AboutSection() {
   //     transition: { duration: 1, staggerChildren: 0.7, when: "afterChildren" },
   //   }, // can also use ease out which removes the jerk operation
   // };
+
+  // to get out of staggering we can add intital and animate in front of variants
   return (
     <About>
       <Description>
