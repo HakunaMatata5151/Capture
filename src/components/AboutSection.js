@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { Hide, About, Description, Image } from "../styles";
 import { fade, pageAnimation, titleAnim, photoAnim } from "../animation";
 
+import Wave from "./Wave";
 function AboutSection() {
   // const titleAnim = {
   //   hidden: { opacity: 0 },
@@ -43,6 +44,7 @@ function AboutSection() {
       <Image>
         <motion.img variants={photoAnim} src={home1} alt="Guy with a camera" />
       </Image>
+      <Wave />
     </About>
   );
 }
