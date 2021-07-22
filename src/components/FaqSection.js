@@ -1,35 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Hide, About, Description, Image } from "../styles";
+import Toggle from "./Toggle";
+import { AnimateSharedLayout } from "framer-motion";
 function FaqSection() {
   return (
     <Faq>
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How do i start?</h4>
+      <Toggle title="How do i Start?">
         <p>Lorem ipsum dolor sit amet.</p>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div className="faq-line"></div>
-      <div className="question">
-        <h4>Daily Sechedule</h4>
+      </Toggle>
+
+      <Toggle title="Daily Sechedule">
         <p>Lorem ipsum dolor sit amet.</p>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div className="faq-line"></div>
-      <div className="question">
-        <h4>Different Payment Methods</h4>
+      </Toggle>
+
+      <Toggle title="Different Payment Methods">
         <p>Lorem ipsum dolor sit amet.</p>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div className="faq-line"></div>
-      <div className="question">
-        <h4>What prduct do u offer</h4>
+      </Toggle>
+
+      <Toggle title="What prduct do u offer">
         <p>Lorem ipsum dolor sit amet.</p>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
+      </Toggle>
     </Faq>
   );
 }
