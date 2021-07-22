@@ -3,31 +3,37 @@ import styled from "styled-components";
 import { Hide, About, Description, Image } from "../styles";
 import Toggle from "./Toggle";
 import { AnimateSharedLayout } from "framer-motion";
+import useScroll from "./useScroll";
+import { scrollReveal } from "../animation";
 function FaqSection() {
+  const [element, controls] = useScroll();
+
   return (
-    <Faq>
+    <Faq variants={scrollReveal} ref={element} animate={controls} initial="hidden">
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <Toggle title="How do i Start?">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </Toggle>
+      <AnimateSharedLayout>
+        <Toggle title="How do i Start?">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </Toggle>
 
-      <Toggle title="Daily Sechedule">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </Toggle>
+        <Toggle title="Daily Sechedule">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </Toggle>
 
-      <Toggle title="Different Payment Methods">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </Toggle>
+        <Toggle title="Different Payment Methods">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </Toggle>
 
-      <Toggle title="What prduct do u offer">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </Toggle>
+        <Toggle title="What prduct do u offer">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 }

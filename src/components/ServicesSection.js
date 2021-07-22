@@ -8,10 +8,20 @@ import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 //importing styled components
 import { Hide, About, Description, Image } from "../styles";
+//TEST
+import { scrollReveal } from "../animation";
+import useScroll from "./useScroll";
 
 function ServicesSection() {
+  const [element, controls] = useScroll();
+  const hidden = scrollReveal.hidden;
   return (
-    <Services>
+    <Services
+      variants={scrollReveal}
+      initial={hidden}
+      ref={element}
+      animate={controls}
+    >
       <Description>
         <h2>
           High <span>quaity</span>services
