@@ -6,6 +6,13 @@ const GlobalStyle = createGlobalStyle`
             box-sizing: border-box;
 
         }
+        //cahnges the font size when on mobile which is very use ful i hope i remember this part
+        html{
+            @media(max-width:1500px){
+                font-size: 75%;
+            }
+            
+        }
         body{
             background:#1b1b1b;
             font-family: 'Inter',sans-serif;
